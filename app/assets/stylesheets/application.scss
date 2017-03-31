@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require simple_calendar
+ *= require_tree .
+ *= require_self
+
+ */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+
+ @import "font-awesome";
+ 
+
+ // @font-face {
+ //  font-family: 'HelveticaNeueCyr-Thin';    
+ //  src: url('/assets/fonts/HelveticaNeueCyr-Thin.otf');
+// }
+
+body{
+	font-family: 'HelveticaNeueCyr-Thin';
+}
+
+ .sign-up-back{
+   background: #ffffff; 
+   padding: 20px;
+ }
+
+ .panel-shadow {
+   box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+
+.navbar {
+	background-color: #fff;
+	
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+
+.simple-calendar {
+  .day {
+	 margin: 50px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {
+
+  }
+
+}
+
+.modal-container{
+	padding: 30px;
+}
+
+.modal-buttons{
+	margin-top: 50px;
+}
+
+.button{
+	color: #000;
+	background: transparent;
+	border: 1px solid #000;
+	border-radius: 40px;
+	padding: 10px 30px;
+	font-size: 15px;
+}
+
+.button:hover{
+	color: #fff;
+	background-color: #000;
+}
+
+#destroy-btn{
+	color: red;
+	border: 1px solid red;
+}
+
+#destroy-btn:hover{
+	color: #fff;
+	background-color: red;
+}
+
+a{
+	color: #000;
+}
+
+a:hover{
+	color: blue;
+	background-color: transparent;
+}
+
+.center{
+	width: 100%;
+	text-align: center;
+	padding: 0 300px;
+	margin-top: 200px;
+}
+
+
+

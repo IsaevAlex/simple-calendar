@@ -1,0 +1,44 @@
+<%= render "layouts/header" %>
+<div class="container">
+	
+	<%= month_calendar(end_attribute: :end_time, events: @meetings) do |date, meetings| %>
+		<%= date %>
+			<% meetings.each do |meeting| %>
+        	<div>
+          		<h4><%= link_to meeting.name, [meeting.user, meeting], remote: true,  data: { toggle: "modal", target: "#showMeetingModal" } %></h4> 
+
+          		
+        	</div>
+     	<% end %>
+ 	<% end %>	
+
+ 	
+</div>
+
+<div class="modal fade" id="showMeetingModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editMeetingModal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newMeetingModal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+ 
+
+
+
+<br>
+
+

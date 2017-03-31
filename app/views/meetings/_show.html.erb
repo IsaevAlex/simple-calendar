@@ -1,0 +1,21 @@
+<div class="modal-container">
+	<p>Заголовок</p>
+	<h1><%= @meeting.name %></h1>
+	<p>Подробное описание</p>
+	<h3><%= @meeting.description %></h3>
+	<p>Начало события</p>
+	<h5><%= @meeting.start_time %></h5>
+	<p>Конец события</p>
+	<h5><%= @meeting.end_time %></h5>
+	<h5>Приоритет</h5>
+	<h3><%= @meeting.priority.name %></h3>
+	
+	<div class="modal-buttons">
+	    <%= link_to 'Удалить', [@meeting.user, @meeting] , method: :delete, data: { confirm: "Вы уверены?" }, class:"button", id:"destroy-btn" %>
+		<%= link_to 'Редактировать', edit_user_meeting_path(@meeting.user, @meeting), class:"button", remote: true,  data: { toggle: "modal", target: "#editMeetingModal" } %> 
+		<%= link_to 'Назад', current_user, class:"button" %>	
+	</div>
+	
+</div>
+
+

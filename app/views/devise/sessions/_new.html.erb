@@ -1,0 +1,19 @@
+<div class="sign-up-back panel-shadow" >
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+          <%= f.email_field :email, :placeholder => "Эл.адрес", autofocus: true, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, autocomplete: "off", :placeholder => "Пароль", autofocus: true, class:"form-control" %>
+        </div>
+        <% if devise_mapping.rememberable? -%>
+            <div class="form-group">
+                <%= f.check_box :remember_me %>
+                <%= f.label "Запомнить меня" %>
+            </div>
+        <% end -%>
+        <div class="form-group">
+            <%= f.submit "Войти в систему", class: "btn btn-success" %>
+        </div>
+    <% end %>
+</div>

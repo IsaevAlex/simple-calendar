@@ -1,0 +1,19 @@
+<div class="center">
+	<h1>Календарь</h1>
+	<h5>Создавайте свои события</h5>
+		<div class="text-element">
+			
+			<div class="form">
+					<%= render "devise/sessions/new", 
+		                    :locals => { 
+		                      :resource => current_user, 
+		                      :resource_name => :user } %> <br>
+			
+					<%= link_to "Регистрация", new_user_registration_path %>	
+			</div>
+				
+		</div>
+
+
+</div>
+		
